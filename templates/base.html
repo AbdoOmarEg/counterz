@@ -10,13 +10,17 @@
 <body>
   <h1>Counterz</h1>
   <form id="incrementForm" action="/" method="POST">
-    <input type="number" id="value" name="value" value="{{count}}" readonly>
-    <button hx-post="/" hx-target="#down" type="submit">Increment Value</button>
+    <div id="input_tag">
+      <input type="text" id="value" name="value" value="0" readonly>
+    </div>
+    <button hx-post="/" hx-target="#input_tag" type="submit">Increment Value</button>
   </form>
-  {% block content %}{% endblock %}
+
+  <span>increment with swab-oob </span>
   <div id="down">
-    hello
+    helloz 0
   </div>
+  {% block content %}{% endblock content %}
 </body>
 
 </html>
