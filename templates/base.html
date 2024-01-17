@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> {{ title }} </title>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+
+<body>
+  <h1>Counterz</h1>
+  <form id="incrementForm" action="/" method="POST">
+    <input type="number" id="value" name="value" value="{{count}}" readonly>
+    <button hx-post="/" hx-target="#down" type="submit">Increment Value</button>
+  </form>
+  {% block content %}{% endblock %}
+  <div id="down">
+    hello
+  </div>
+</body>
+
+</html>
